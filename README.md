@@ -1,4 +1,4 @@
-# 📸 MERN Instagram Clone
+# 📸 Medio Post App 
 
 ### A Full Stack Social Media Application with Authentication, Posts, Likes, and Follow System
 

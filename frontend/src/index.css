@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: #f0f0f0;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 40px #141414 inset !important;
+  -webkit-text-fill-color: #f0f0f0 !important;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #222; border-radius: 3px; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.fade-up  { animation: fadeUp 0.3s ease forwards; }
+.spinner  { animation: spin 0.75s linear infinite; }
+
+.desktop-nav { display: flex !important; }
+.mobile-hamburger { display: none !important; }
+
+/* Mobile screen breakpoints */
+@media (max-width: 900px) {
+  .desktop-nav { display: none !important; }
+  .mobile-hamburger { display: block !important; }
+}
+@media (max-width: 900px) {
+  /* Dashboard grid collapses to single column */
+  [style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* hide left/right sticky sidebars on mobile */
+  [style*="position: sticky"] {
+    display: none !important;
+  }
+}

@@ -2,7 +2,7 @@
 
 ### A Full Stack Social Media Application with Authentication, Posts, Likes, and Follow System
 
-This project is a **full-stack Instagram clone built using the MERN stack (MongoDB, Express.js, React.js, Node.js)**.
+This project is a **full-stack app built using the MERN stack (MongoDB, Express.js, React.js, Node.js)**.
 The application allows users to register, login, create posts, like posts, follow or unfollow users, and interact with other users just like a real social media platform.
 
 The project demonstrates a **modern full-stack architecture with a React frontend and a Node.js + Express backend connected to MongoDB.**

@@ -17,7 +17,7 @@ app.use(cors({
 // ✅ Correct path (VERY IMPORTANT)
 const __dirname2 = path.resolve()
 
-app.use(express.static(path.join(__dirname2, "dist")))
+app.use(express.static(path.join(__dirname2, "../frontend/dist")))
 
 // ✅ Routes
 const postRouter = require("./routes/post.routes")
@@ -29,8 +29,8 @@ app.use("/api/post", postRouter)
 app.use("/api/user", userRouter)
 
 // ✅ Catch-all (React routing fix)
-app.get(/.*/, (req, res) => {
-    res.sendFile(path.join(__dirname2, "dist", "index.html"))
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname2, "../frontend/dist", "index.html"))
 })
 
 module.exports = app
